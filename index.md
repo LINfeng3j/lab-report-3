@@ -29,5 +29,5 @@ public class ArrayTests {
     }
 }
 ```
-3.The symptom, as the output of running the tests
+3.The symptom, as the output of running the tests<br>
 __created test.sh to fast test file__
