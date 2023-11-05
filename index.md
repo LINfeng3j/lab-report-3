@@ -137,6 +137,77 @@ $ ls |grep -c .class
 ```
 __In the second example, I used .class as the string and tried to let it search all .class files, and then it worked successfully and got the correct 7. But if I modify the name of one of the files to LinkedListExample.class.java, but it is a Java file, I find that grep will still pull it out. So I may have to pay attention to this in the future.__ <br>
 
+__3. grep -y__
+```ruby
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep array
+
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep -y array
+ArrayExamples.class
+ArrayExamples.java
+ArrayTests.class
+ArrayTests.java
+```
+__The usage of -y is well demonstrated in this example. It can be searched regardless of the case. This may catch errors in some accidentally misspelled cases and help fix them.__ <br>
+```ruby
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep -y linkedlistexample
+LinkedListExample.java
+
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep Linkedlistexample
+```
+__This is also a good example. If I forget how many characters I uppercase on a file but still remember its name, I can use -y to find it.__ <br>
+
+__4. grep -w__ <br>
+```ruby
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ grep "42" 123.txt
+42
+421
+
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ grep -w "42" 123.txt
+42
+```
+__The use of -w can be seen in this example as to search for a specific target. The output will only be the same string you input; any other option with the same string inside will be canceled.__ <br>
+```ruby
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep "ArrayTests.java"
+12ArrayTests.java
+ArrayTests.java
+
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep -w "Arraytests.java"
+
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep -w "ArrayTests.java"
+ArrayTests.java
+
+75442@jfela MINGW64 ~/Documents/GitHub/lab3 (main)
+$ ls |grep -w -y Arraytests.java
+ArrayTests.java
+```
+__This example shows how to use it with ls. Due to its characteristics, I must also pay attention to spelling when using it. If there are any cases or spelling errors, the corresponding file will not be searched.(but I can also use -y to help me with the issue of the case)__ <br>
+
+__The sources I used are below__ <br>
+https://man7.org/linux/man-pages/man1/grep.1.html <br>
+https://en.wikibooks.org/wiki/Grep <br>
+https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html<br>
+
+__The way I use these URLs is to find grep's various command lines and rough explanations and then test them in the workspace of my previous lab.__
+
+
+
+
+
+
+
+
+
+
+
 
 
 
