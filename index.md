@@ -1,4 +1,5 @@
 # Part 1
+1.A failure-inducing input for the buggy program, as a JUnit test and any associated code
 ```ruby
 import static org.junit.Assert.*;
 import org.junit.*;
