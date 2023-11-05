@@ -197,7 +197,7 @@ https://man7.org/linux/man-pages/man1/grep.1.html <br>
 https://en.wikibooks.org/wiki/Grep <br>
 https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html<br>
 
-__The way I use these URLs is to find grep's various command lines and rough explanations and then test them in the workspace of my previous lab.__
+__The way I use these URLs is to find grep's various command lines and rough explanations and then test them in my previous lab workspace.__
 
 
 
