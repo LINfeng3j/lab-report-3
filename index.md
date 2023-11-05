@@ -14,4 +14,18 @@ public class ArrayTests {
     }
 }
 ```
-2.
+2.An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+```ruby
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ArrayTests {
+
+    @Test
+    public void testAverage2() {
+        double[] input2 = {2.0, 3.0, 4.0, 6.0, 8.0};
+        // The lowest value is 2.0 (at index 0), and the average without the lowest is (3.0 + 4.0 + 6.0 + 8.0) / 4 = 5.25.
+        assertEquals(5.25, ArrayExamples.averageWithoutLowest(input2), 0.001); 
+    }
+}
+```
