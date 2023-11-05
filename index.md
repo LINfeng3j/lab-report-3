@@ -36,3 +36,48 @@ __The symptom for testAverage1__ <br>
 ![Image](3.02.png)  <br>
 __The symptom for testAverage2__ <br>
 ![Image](3.03.png)] <br>
+4.The bug, as the before-and-after code change required to fix it <br>
+```ruby
+static double averageWithoutLowest(double[] arr) {
+    if (arr.length < 2) {
+        return 0.0;
+    }
+    double lowest = arr[0];
+    for (double num : arr) {
+        if (num < lowest) {
+            lowest = num;
+        }
+    }
+    double sum = 0;
+    for (double num : arr) {
+        if (num != lowest) {
+            sum += num;
+        }
+    }
+    return sum / (arr.length - 1);
+}
+```
+__This code cannot recognize the occurrence of multiple lowest numbers.__ <br>
+__To fix that, I choose to make a change in the loop and set a value that removes each one to the lowest number to make it work.__ <br>
+```ruby
+static double averageWithoutLowest(double[] arr) {
+    if (arr.length < 2) return 0.0;
+
+    double lowest = arr[0];
+    int countLowest = 0;
+    double sum = 0;
+
+    for (double num : arr) {
+        if (num < lowest) lowest = num;
+    }
+
+    for (double num : arr) {
+        if (num == lowest) countLowest++;
+        else sum += num;
+    }
+
+    return sum / (arr.length - countLowest);
+}
+```
+
+
