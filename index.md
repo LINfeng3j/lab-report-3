@@ -80,5 +80,7 @@ static double averageWithoutLowest(double[] arr) {
     return sum / (arr.length - countLowest);
 }
 ```
+# Part 2 <br>
+
 
 
