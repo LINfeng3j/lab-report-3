@@ -81,6 +81,8 @@ static double averageWithoutLowest(double[] arr) {
 }
 ```
 # Part 2 <br>
+__ grep is command i choosed__<br>
+
 
 
 
