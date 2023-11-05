@@ -30,4 +30,9 @@ public class ArrayTests {
 }
 ```
 3.The symptom, as the output of running the tests<br>
-__created test.sh to fast test file__
+__created test.sh to fast test file__ <br>
+![Image](3.01.png)  <br>
+__The symptom for testAverage1__ <br>
+![Image](3.02.png)  <br>
+__The symptom for testAverage2__ <br>
+![Image](3.03.png)] <br>
