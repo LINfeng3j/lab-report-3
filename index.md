@@ -1,5 +1,5 @@
 # Part 1
-```
+```ruby
 import static org.junit.Assert.*;
 import org.junit.*;
 
