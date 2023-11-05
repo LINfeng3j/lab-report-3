@@ -37,6 +37,7 @@ __The symptom for testAverage1__ <br>
 __The symptom for testAverage2__ <br>
 ![Image](3.03.png)] <br>
 4.The bug, as the before-and-after code change required to fix it <br>
+__Original code__ <br>
 ```ruby
 static double averageWithoutLowest(double[] arr) {
     if (arr.length < 2) {
