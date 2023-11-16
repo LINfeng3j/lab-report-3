@@ -58,8 +58,7 @@ static double averageWithoutLowest(double[] arr) {
     return sum / (arr.length - 1);
 }
 ```
-__This code cannot recognize the occurrence of multiple lowest numbers.__ <br>
-__To fix that, I choose to make a change in the loop and set a value that removes each one to the lowest number to make it work.__ <br>
+__The main problem with this code is that it ends with /arr.lenth-1, which means it only records the case where there is one lowest number, so I set up an extra loop so that it can record multiple most in sufficient numbers so that when we And changed -1 to -the lowest number.__ <br>
 ```ruby
 static double averageWithoutLowest(double[] arr) {
     if (arr.length < 2) return 0.0;
